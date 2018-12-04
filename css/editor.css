@@ -1,0 +1,187 @@
+html {
+    overflow: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+body.kq-editor {
+    width: 100%;
+    height: 90vh;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+	
+}
+.ui-layout-east {
+    position: relative;
+}
+
+body.kq-editor .ui-layout-toggler {
+    background-color: #eaeaea;
+    border: none;
+}
+body.kq-editor .ui-layout-toggler#north-toggler {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    height: 12px;
+    width: 100%;
+}
+body.kq-editor .ui-layout-south {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+}
+
+body.kq-editor .ui-layout-south .ui-layout-center {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+}
+body.kq-editor .ui-layout-toggler#east-toggler {
+    width: 12px;
+}
+body.kq-editor .ui-layout-south .ui-layout-east {
+    width: calc(50% - 6px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body.kq-editor .ui-layout-north {
+    background-color: #fff;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+}
+body.kq-editor .ui-layout-north span#toolbar {
+    margin: 11px 0 11px 12px;
+    display: inline-block;
+    font-size: 0;
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-size: contain;
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-bold {
+    background-image: url(../images/tools/bold.svg);
+}
+
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-italic {
+    background-image: url(../images/tools/italic.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-strikethrough {
+    background-image: url(../images/tools/strikethrough.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-underline {
+    background-image: url(../images/tools/underline.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-pencil {
+    background-image: url(../images/tools/pencil.svg);
+}
+body.kq-editor .ui-layout-north i.dividor {
+    background-color: #e7e7e7;
+    margin: 0px 5px;
+    width: 1px;
+    height: 14px;
+    position: relative;
+    top: -5px;
+    display: inline-block;
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-heading1 {
+    background-image: url(../images/tools/heading1.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-heading2 {
+    background-image: url(../images/tools/heading2.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-heading3 {
+    background-image: url(../images/tools/heading3.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-heading4 {
+    background-image: url(../images/tools/heading4.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-heading5 {
+    background-image: url(../images/tools/heading5.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-heading6 {
+    background-image: url(../images/tools/heading6.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-hr {
+    background-image: url(../images/tools/hr.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-quote {
+    background-image: url(../images/tools/quote.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-ul {
+    background-image: url(../images/tools/ul.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-ol {
+    background-image: url(../images/tools/ol.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-link {
+    background-image: url(../images/tools/link.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-image {
+    background-image: url(../images/tools/image.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-code {
+    background-image: url(../images/tools/code.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-table {
+    background-image: url(../images/tools/table.svg);
+}
+body.kq-editor .ui-layout-north span#toolbar .help {
+    display: inline-block;
+    background: #959fb0;
+    margin: 4px;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    border-radius: 50%;
+    background-image: url(../images/tools/help.svg);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+body.kq-editor .ui-layout-north span#toolbar i.svg-icon.svg-theme {
+    background-image: url(../images/tools/theme.svg);
+}
+body.kq-editor .ui-layout-south .ui-layout-center #editor.ace_editor {
+    width: 100%;
+    height: 100%;
+}
+
+.markdown-body {
+    min-width: 256px;
+    max-width: 978px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 14px;
+    tab-size: 4;
+}
+
+::-webkit-scrollbar
+{
+    width: 8px;
+    height: 8px;
+    background-color: #76838f;
+}
+ 
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    background-color: #76838f;
+}
+ 
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}

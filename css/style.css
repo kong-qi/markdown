@@ -1,0 +1,96 @@
+/* 编辑器 */
+
+
+.md-editor-tools {
+	background-color: #fff;
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+
+}
+
+.md-editor-tools .tools-items {
+	margin: 11px 0 11px 12px;
+	display: inline-block;
+	font-size: 0;
+}
+
+.tools-items i.svg-icon {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	background-size: contain;
+}
+
+.tools-items i.svg-icon.svg-bold {
+	background-image: url(../images/tools/b.svg);
+}
+.md-container
+{
+	position: absolute;
+	width: 100%;
+	height: 80%;
+	top: 60px;
+	left: 0;;
+}
+#editor-view {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	font-size: 16px;
+}
+
+/* 预览框 */
+#md-viewer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 50%;
+	overflow-y: scroll;
+}
+
+body[data-mode=edit] {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+.ui-layout-east {
+    position: relative;
+}
+
+body[data-mode=edit] .ui-layout-toggler {
+    background-color: #eaeaea;
+    border: none;
+}
+body[data-mode=edit] .ui-layout-toggler#north-toggler {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    height: 12px;
+    width: 100%;
+}
+body[data-mode=edit] .ui-layout-south {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+}
+
+body[data-mode=edit] .ui-layout-south .ui-layout-center {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+}
+body[data-mode=edit] .ui-layout-toggler#east-toggler {
+    width: 12px;
+}
+body[data-mode=edit] .ui-layout-south .ui-layout-east {
+    width: calc(50% - 6px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>自己搞一个markdown编辑器</title>
+		<meta name="keywords" content="黑白课堂,空气工作室,www.heibaiketang.com">
+		<meta name="description" content="黑白课堂,空气工作室,www.heibaiketang.com">
+		<link rel="stylesheet" type="text/css" href="http://www.heibaiketang.com/style/bootstrap/css/bootstrap.css">
+		<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/editor.css" />
+	</head>
+	<body class="kq-editor">
+		<div class="ui-layout-north">
+			<span id="toolbar" class="noselect" data-open-title="Hide Toolbar" data-closed-title="Show Toolbar">
+				<i title="Bold" class="svg-icon svg-bold styling-icon" data-type="setStyle" data-modifier="****">
+				</i>
+				<i title="Italic" class="svg-icon svg-italic styling-icon" data-type="setStyle" data-modifier="**">
+				</i>
+				<i title="Strikethrough" class="svg-icon svg-strikethrough styling-icon" data-type="setStyle" data-modifier="~~">
+				</i>
+				<i title="Insert" class="svg-icon svg-underline styling-icon" data-type="setStyleU" data-modifier="u">
+				</i>
+
+				<i class="dividor"></i>
+				<i title="Heading 1" class="svg-icon svg-heading1 heading-icon" data-type="title" data-modifier="1">
+				</i>
+				<i title="Heading 2" class="svg-icon svg-heading2 heading-icon" data-type="title" data-modifier="2">
+				</i>
+				<i title="Heading 3" class="svg-icon svg-heading3 heading-icon" data-type="title" data-modifier="3">
+				</i>
+				<i title="Heading 4" class="svg-icon svg-heading4 heading-icon" data-type="title" data-modifier="4">
+				</i>
+				<i title="Heading 5" class="svg-icon svg-heading5 heading-icon" data-type="title" data-modifier="5">
+				</i>
+				<i title="Heading 6" class="svg-icon svg-heading6 heading-icon" data-type="title" data-modifier="6">
+				</i>
+				<i class="dividor"></i>
+				<i title="Horizontal rule" class="svg-icon svg-hr" data-type="br" data-modifier="***">
+				</i>
+				<i title="Quote" class="svg-icon svg-quote list-icon" data-type="setStyleNoEnd" data-modifier="> ">
+				</i>
+				<i title="Unordered list" class="svg-icon svg-ul list-icon" data-type="setStyleNoEnd" data-modifier="-">
+				</i>
+				<i title="Ordered list" class="svg-icon svg-ol list-icon" data-type="setStyleNoEnd" data-modifier="1. ">
+				</i>
+
+				<i class="dividor"></i>
+				<i title="Link" class="svg-icon svg-link" id="link-icon" data-type="link" data-modifier="[提示文本](链接地址)">
+				</i>
+				<i title="Image" class="svg-icon svg-image" id="image-icon" data-type="image">
+				</i>
+				<i title="Code" class="svg-icon svg-code" data-type="code" data-modifier="">
+				</i>
+				<i title="Table" class="svg-icon svg-table" id="table-icon" data-type="table" data-modifier="">
+				</i>
+				<i class="dividor"></i>
+
+				<!-- <i title="theme" class="svg-icon svg-theme theme-icon">
+				</i> -->
+				<!-- <a title="Help" class="help" href="http://note.youdao.com/iyoudao/?p=2411" target="_blank"></a> -->
+			</span>
+		</div>
+
+		<div class="ui-layout-toggler" id="north-toggler"></div>
+		<div class="ui-layout-south">
+			<div class="ui-layout-center">
+				<div id="editor"></div> <!-- 编辑器 -->
+			</div>
+			<div class="ui-layout-toggler" id="east-toggler"></div>
+			<div class="ui-layout-east" id="preview-warp">
+				<article class="markdown-body" id="preview" data-open-title="Hide Preview" data-closed-title="Show Preview"></article>
+				<!-- 实时预览 -->
+			</div>
+		</div>
+
+		<h4>编辑器内容</h4>
+		<textarea rows="6" cols="" class="form-control" id="edinput"></textarea>
+
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"></script>
+		<script src="https://cdn.bootcss.com/marked/0.5.1/marked.min.js"></script>
+		<scriipt src=""></scriipt>
+
+		<script src="js/KqEditor.js"></script>
+		<script type="text/javascript">
+			var editor = KqEditor({
+				obj: 'editor',
+				cacheCover: 1,
+				viewObj: "#preview",
+				scrollView: "#preview-warp",
+				localInput: "#edinput"
+				//theme:"ace/theme/tomorrow",
+				//上传图片自己写,ed返回的时编辑器的实例,最后用ed.insert('内容');
+				// 				uploadImage:function(ed){
+				// 					
+				// 				}
+			});
+			//editor.setContentInput();
+		</script>
+	</body>
+
+</html>
