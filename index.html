@@ -73,6 +73,7 @@
 				<!-- 实时预览 -->
 			</div>
 		</div>
+		<h3 id="getEditorContent">取得编辑器内容</h3>
 
 		<h4>编辑器内容</h4>
 		<textarea rows="6" cols="" class="form-control" id="edinput"></textarea>
@@ -81,8 +82,6 @@
 		<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"></script>
 		<script src="https://cdn.bootcss.com/marked/0.5.1/marked.min.js"></script>
-		<scriipt src=""></scriipt>
-
 		<script src="js/KqEditor.js"></script>
 		<script type="text/javascript">
 			var editor = KqEditor({
@@ -97,6 +96,12 @@
 				// 					
 				// 				}
 			});
+			$("#getEditorContent").click(function(){
+				
+				content=editor.getContent();
+				console.log(content);
+				console.log(editor.markContent);
+			})
 			//editor.setContentInput();
 		</script>
 	</body>
