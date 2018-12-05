@@ -107,9 +107,12 @@
 	_.loadingData = function(md_editor) {
 		if (this.option.cacheCover) {
 			var content = this.cacheData(this.option.cacheName);
-			md_editor.setValue(content);
-			this.view(content);
-			this.highCode();
+			if(content)
+			{
+				md_editor.setValue(content);
+				this.view(content);
+				this.highCode();
+			}
 		} else {
 			localStorage.clear();
 		}
