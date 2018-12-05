@@ -172,4 +172,5 @@ window.frames["myFrame"].editor.setContent('### 黑白课堂[进入](http//:www.
 
 本文为原创，作者主页：[黑白课堂](http://www.heibaiketang.com)www.heibaiketang.com。
 演示地址:[演示进入](http://www.heibaiketang.com/tools/markdown)www.heibaiketang.com/tools/markdown  
-git演示地址:https://kong-qi.github.io/markdown/，https://kong-qi.github.io/markdown/iframe.html
+git演示地址:https://kong-qi.github.io/markdown/
+https://kong-qi.github.io/markdown/iframe.html
