@@ -74,6 +74,7 @@
 			</div>
 		</div>
 		<h3 id="getEditorContent">取得编辑器内容</h3>
+		<h4 id="setWrite">设置内容</h4>
 
 		<h4>编辑器内容</h4>
 		<textarea rows="6" cols="" class="form-control" id="edinput"></textarea>
@@ -99,8 +100,13 @@
 			$("#getEditorContent").click(function(){
 				
 				content=editor.getContent();
-				console.log(content);
+				alert(content);
 				console.log(editor.markContent);
+			})
+			$("#setWrite").click(function(){
+				
+				editor.setContent('### 黑白课堂[进入](http//:www.heibaiketang.com)');
+				
 			})
 			//editor.setContentInput();
 		</script>

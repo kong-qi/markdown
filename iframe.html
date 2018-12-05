@@ -21,6 +21,14 @@
 		<div class="container-fluid">
 			<h4>编辑器内容</h4>
 			<textarea rows="6" cols="" class="form-control" id="markdownValue"></textarea>
+			<h4 id="setWrite">设置内容</h4>
+			
 		</div>
+		<script>
+			$("#setWrite").click(function(){
+				window.frames["myFrame"].editor.setContent('### 黑白课堂[进入](http//:www.heibaiketang.com)');
+				
+			})
+		</script>
 	</body>
 </html>

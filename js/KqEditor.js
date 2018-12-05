@@ -76,6 +76,10 @@
 		//return this;
 
 	}
+	//设置内容
+	_.setContent=function(content){
+		this.editor.setValue(content);
+	}
 	//取得内容，可以直接调用这个函数获取。
 	_.getContent = function() {
 		return this.markContent;
